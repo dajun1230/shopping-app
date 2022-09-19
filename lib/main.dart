@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shopping_app/routes.dart';
 
 void main() {
@@ -12,6 +13,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Shopping App',
+      localizationsDelegates: const [
+        ...AppLocalizations.localizationsDelegates
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: const Locale('zh', 'CN'),
+
+      /// 当传入的是不支持的语种，可以根据这个回调，返回相近,并且支持的语种
+      localeResolutionCallback: (local, support) {
+        /// 当前软件支行的语言 也就是[supportedLocales] 中配制的语种
+        if (support.contains(local)) {
+          return local;
+        }
+
+        /// 如果当前软件运行的手机环境不在 [supportedLocales] 中配制的语种范围内
+        /// 返回一种默认的语言环境，这里使用的是中文
+        return const Locale('zh', 'CN');
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

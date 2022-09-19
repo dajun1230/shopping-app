@@ -1,0 +1,28 @@
+{
+  "githubRepo": "{repoName} GitHub repository",
+  "@githubRepo": {
+    "description": "Represents a link to a GitHub repository.",
+    "placeholders": {
+      "repoName": {
+        "example": "Flutter Gallery"
+      }
+    }
+  },
+  "aboutDialogDescription": "To see the source code for this app, please visit the {repoLink}.",
+  "@aboutDialogDescription": {
+    "description": "A description about how to view the source code for this app.",
+    "placeholders": {
+      "repoLink": {
+        "example": "Flutter Gallery GitHub repository"
+      }
+    }
+  },
+  "signIn": "SIGN IN",
+  "@signIn": {
+    "description": "Sign in label to sign into website."
+  },
+  "bannerDemoText": "Your password was updated on your other device. Please sign in again.",
+  "@bannerDemoText": {
+    "description": "Password was updated on a different device and the user is required to sign in again"
+  }
+}

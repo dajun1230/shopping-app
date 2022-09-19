@@ -27,6 +27,14 @@ class _MyPageState extends State<MyPage> {
     });
   }
 
+  void languageSetting() {
+    Navigator.pushNamed(context, "/setting/language");
+  }
+
+  void themeSetting() {
+    Navigator.pushNamed(context, "/setting/theme");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +43,8 @@ class _MyPageState extends State<MyPage> {
           children: [
             ElevatedButton(onPressed: getUserinfo, child: const Text('获取用户信息')),
             Text('用户名：${_userinfo.username ?? ""}'),
+            TextButton(onPressed: languageSetting, child: const Text("语言切换")),
+            TextButton(onPressed: themeSetting, child: const Text("主题切换"))
           ],
         ));
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/common/my_icons.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -47,6 +48,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Scaffold(
         appBar: AppBar(title: const Text('首页')),
         body: Container(
@@ -113,7 +115,7 @@ class _HomePageState extends State<HomePage> {
               // 横向列表
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: const Text(""),
+                child: Text(localizations.signIn),
               ),
               // 分类
               Container(
