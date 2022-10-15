@@ -24,5 +24,9 @@
   "bannerDemoText": "Your password was updated on your other device. Please sign in again.",
   "@bannerDemoText": {
     "description": "Password was updated on a different device and the user is required to sign in again"
+  },
+  "language": "language",
+  "@language": {
+     "description": "xxx"
   }
 }

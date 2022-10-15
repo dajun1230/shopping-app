@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/common/data/app_options.dart';
 
 const themes = <MaterialColor>[
   Colors.blue,
@@ -13,6 +14,8 @@ class ThemeSettingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final options = AppOptions.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('主题'),
@@ -29,8 +32,8 @@ class ThemeSettingPage extends StatelessWidget {
               ),
             ),
             onTap: () {
-              //主题更新后，MaterialApp会重新build
-              // Provider.of<ThemeModel>(context, listen: false).theme = e;
+              /// 主题更新后，MaterialApp会重新build
+              AppOptions.update(context, options.copyWith(theme: e));
             },
           );
         }).toList(),

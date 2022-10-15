@@ -2,5 +2,6 @@
   "githubRepo": "{repoName} GitHub 代码库",
   "aboutDialogDescription": "要查看此应用的源代码，请访问 {repoLink}。",
   "signIn": "登录",
-  "bannerDemoText": "您的密码已在其他设备上更新。请重新登录。"
+  "bannerDemoText": "您的密码已在其他设备上更新。请重新登录。",
+  "language": "语言"
 }
