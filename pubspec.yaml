@@ -41,6 +41,7 @@ dependencies:
   dio: ^4.0.6
   json_annotation: ^4.6.0
 
+  permission_handler: ^10.2.0
   agora_rtc_engine: ^6.0.0
 
 dev_dependencies:

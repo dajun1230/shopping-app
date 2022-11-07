@@ -14,7 +14,14 @@ class _CartPageState extends State<CartPage> {
       appBar: AppBar(
         title: const Text("购物车"),
       ),
-      body: const Center(child: Text('购物车')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text("进入视频页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/cart/video');
+          },
+        ),
+      ),
     );
   }
 }
